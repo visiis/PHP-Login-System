@@ -16,11 +16,6 @@
 
 	<title>Document</title>
 
-	<style>
-		body {
-			font-family: "Microsoft YaHei","Heiti TC";
-		}
-	</style>
 	<!-- UIkit CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/css/uikit.min.css" />
 </head>
@@ -45,6 +40,8 @@
 			            <input class="uk-input" id="form-stacked-password" type="password" placeholder="Your Password" required="required">
 			        </div>
 			    </div>
+
+			    <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
 
 			    <div class="uk-margin">
 			        <button class="uk-button uk-button-default" type="submit">登入</button>
