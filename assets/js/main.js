@@ -22,23 +22,29 @@ $(document)
 		return false;
 	}
 
+	console.log("email : ", dataObj.email, "\npassword : ", dataObj.password);
+
 	//Assuming the code gets this far, we can start the ajax process
 	_error.hide();
 
 	$.ajax({
-		type: 'POST',
-		url: 'ajax/register.php',
+		method: 'POST',
+		url: '/web/php_login_course/ajax/register.php',
 		data: dataObj,
 		dataType: 'json',
-		async: true
+		async: true,
 	})
 	.done(function ajaxDone(data) {
 		//whatever data is
 		console.log(data);
-		// if(data.redirect !== undefined) {
+		console.log('this is data', data.email, data.password);
+		if(data.redirect !== undefined) {
 		// 	window.location = data.redirect;
-		// }
-		console.log(data.name);
+		} else if(data.error !== undefined) {
+			_error
+				.text(data.error)
+				.show();
+		}
 	})
 	.fail(function ajaxFailed(e) {
 		//This failed
@@ -47,7 +53,7 @@ $(document)
 	.always(function ajaxAlwaysDoThis(data) {
 		//Always do
 		console.log('Always');
-	});
+	})
 
 	return false;
-});
+})

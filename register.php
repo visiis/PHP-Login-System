@@ -16,11 +16,6 @@
 
 	<title>Document</title>
 
-	<style>
-		body {
-			font-family: "Microsoft YaHei","Heiti TC";
-		}
-	</style>
 	<!-- UIkit CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/css/uikit.min.css" />
 </head>
@@ -36,14 +31,14 @@
 			    <div class="uk-margin">
 			        <label class="uk-form-label" for="form-stacked-text">Email</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="email" placeholder="email@email.com" required="required">
+			            <input class="uk-input" id="form-stacked-text" type="email" placeholder="email@email.com" required="required" name="email">
 			        </div>
 			    </div>
 
 			    <div class="uk-margin">
 			        <label class="uk-form-label" for="form-stacked-password">密碼</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-password" type="password" placeholder="Your Password" required="required">
+			            <input class="uk-input" id="form-stacked-password" type="password" placeholder="Your Password" required="required" name="password">
 			        </div>
 			    </div>
 

@@ -13,7 +13,7 @@ class DB {
 
 		try {
 
-			self::$con = new PDO( 'mysql:charset=utf8mb4;host=localhost;port=3306;dbname=login_course', 'root', 'MSrice718293' );
+			self::$con = new PDO( 'mysql:charset=utf8mb4;host=localhost;port=3306;dbname=login_course', 'test', 'test' );
 			self::$con->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 			self::$con->setAttribute( PDO::ATTR_PERSISTENT, false );
 
