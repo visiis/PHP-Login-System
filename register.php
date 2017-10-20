@@ -13,7 +13,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="follow">
-  	<base href="" target="_blank"/>
 
 	<title>Document</title>
 
@@ -47,6 +46,8 @@
 			            <input class="uk-input" id="form-stacked-password" type="password" placeholder="Your Password" required="required">
 			        </div>
 			    </div>
+
+			    <div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
 
 			    <div class="uk-margin">
 			        <button class="uk-button uk-button-default" type="submit">註冊</button>
