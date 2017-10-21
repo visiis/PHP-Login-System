@@ -36,10 +36,8 @@ $(document)
 	})
 	.done(function ajaxDone(data) {
 		//whatever data is
-		console.log(data);
-		console.log('this is data', data.email, data.password);
 		if(data.redirect !== undefined) {
-		// 	window.location = data.redirect;
+		 	window.location = data.redirect;
 		} else if(data.error !== undefined) {
 			_error
 				.text(data.error)
@@ -52,7 +50,6 @@ $(document)
 	})
 	.always(function ajaxAlwaysDoThis(data) {
 		//Always do
-		console.log('Always');
 	});
 
 	return false;
@@ -96,8 +93,6 @@ $(document)
 	})
 	.done(function ajaxDone(data) {
 		//whatever data is
-		console.log(data);
-		console.log('this is data', data.email, data.password);
 		if(data.redirect !== undefined) {
 			 window.location = data.redirect;
 		} else if(data.error !== undefined) {
@@ -105,7 +100,6 @@ $(document)
 				.html(data.error)
 				.show();
 		}
-		console.log(data.rem);
 	})
 	.fail(function ajaxFailed(e) {
 		//This failed
@@ -113,7 +107,6 @@ $(document)
 	})
 	.always(function ajaxAlwaysDoThis(data) {
 		//Always do
-		console.log('Always');
 	});
 
 	return false;

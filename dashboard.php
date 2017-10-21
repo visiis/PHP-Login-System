@@ -5,9 +5,9 @@
 	//Require the config
 	require_once "inc/config.php";
 	
+	Page::ForceLogin();
 
-	ForceLogin();
-
+		$User = new User($_SESSION['user_id']);
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,9 @@
 
 
 	<div class="uk-section uk-container ul-text-center">
-		Dashboard here
+		<h2>Dashboard</h2>
+		<p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
+		<a href="logout.php">登出</a>
 	</div>
 
 
